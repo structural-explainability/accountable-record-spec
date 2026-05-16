@@ -3,6 +3,39 @@ revision = 3
 requires-python = ">=3.15"
 
 [[package]]
+name = "accountable-record"
+source = { editable = "." }
+dependencies = [
+    { name = "se-manifest-schema" },
+]
+
+[package.optional-dependencies]
+dev = [
+    { name = "build" },
+    { name = "packaging" },
+    { name = "pre-commit" },
+    { name = "pyright" },
+    { name = "pytest" },
+    { name = "pytest-cov" },
+    { name = "pyyaml" },
+    { name = "ruff" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "build", marker = "extra == 'dev'" },
+    { name = "packaging", marker = "extra == 'dev'" },
+    { name = "pre-commit", marker = "extra == 'dev'" },
+    { name = "pyright", marker = "extra == 'dev'" },
+    { name = "pytest", marker = "extra == 'dev'" },
+    { name = "pytest-cov", marker = "extra == 'dev'" },
+    { name = "pyyaml", marker = "extra == 'dev'" },
+    { name = "ruff", marker = "extra == 'dev'" },
+    { name = "se-manifest-schema", git = "https://github.com/structural-explainability/se-manifest-schema.git?rev=main" },
+]
+provides-extras = ["dev", "docs"]
+
+[[package]]
 name = "build"
 version = "1.5.0"
 source = { registry = "https://pypi.org/simple" }
@@ -238,44 +271,11 @@ wheels = [
 
 [[package]]
 name = "se-manifest-schema"
-version = "0.3.1.dev1+gcd1ad6dc4"
-source = { git = "https://github.com/structural-explainability/se-manifest-schema.git?rev=main#cd1ad6dc48a5665a435ff5d3f3335604d0c8bcf1" }
+version = "0.3.1.dev2+g1e6ed424a"
+source = { git = "https://github.com/structural-explainability/se-manifest-schema.git?rev=main#1e6ed424a5454de38485c18e271a646244fa63c7" }
 dependencies = [
     { name = "pyyaml" },
 ]
-
-[[package]]
-name = "accountable-record"
-source = { editable = "." }
-dependencies = [
-    { name = "se-manifest-schema" },
-]
-
-[package.optional-dependencies]
-dev = [
-    { name = "build" },
-    { name = "packaging" },
-    { name = "pre-commit" },
-    { name = "pyright" },
-    { name = "pytest" },
-    { name = "pytest-cov" },
-    { name = "pyyaml" },
-    { name = "ruff" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "build", marker = "extra == 'dev'" },
-    { name = "packaging", marker = "extra == 'dev'" },
-    { name = "pre-commit", marker = "extra == 'dev'" },
-    { name = "pyright", marker = "extra == 'dev'" },
-    { name = "pytest", marker = "extra == 'dev'" },
-    { name = "pytest-cov", marker = "extra == 'dev'" },
-    { name = "pyyaml", marker = "extra == 'dev'" },
-    { name = "ruff", marker = "extra == 'dev'" },
-    { name = "se-manifest-schema", git = "https://github.com/structural-explainability/se-manifest-schema.git?rev=main" },
-]
-provides-extras = ["dev", "docs"]
 
 [[package]]
 name = "typing-extensions"
