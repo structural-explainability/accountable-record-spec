@@ -1,4 +1,4 @@
-"""Governance Boundary validation and export utilities."""
+"""Validation and export utilities."""
 
 from accountable_record._version import __version__
 
