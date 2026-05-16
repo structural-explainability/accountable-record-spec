@@ -180,6 +180,13 @@ uv sync --extra dev --extra docs --upgrade
 # install git hooks once per clone
 uvx pre-commit install
 
+# autofix and manual fix issues
+git add -A
+uvx pre-commit run --all-files
+# repeat if changes were made
+git add -A
+uvx pre-commit run --all-files
+
 # validate Markdown sources and generated specification artifacts
 uv run se-validate
 
@@ -194,13 +201,6 @@ uv run se-ref-validate
 
 # run strict validation, including all standard source and export checks
 uv run se-validate --strict
-
-# autofix and manual fix issues
-git add -A
-uvx pre-commit run --all-files
-# repeat if changes were made
-git add -A
-uvx pre-commit run --all-files
 
 # do chores
 uv run python -m pyright
