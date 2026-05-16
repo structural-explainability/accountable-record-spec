@@ -1,12 +1,12 @@
-# accountable-record
+# accountable-record-spec
 
-[![Repo](https://img.shields.io/badge/repo-GitHub-black?logo=github)](https://github.com/structural-explainability/accountable-record)
+[![Repo](https://img.shields.io/badge/repo-GitHub-black?logo=github)](https://github.com/structural-explainability/accountable-record-spec)
 [![Tooling](https://img.shields.io/badge/python-3.15%2B-blue?logo=python)](./pyproject.toml)
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](./LICENSE)
 
-[![CI](https://github.com/structural-explainability/accountable-record/actions/workflows/ci-python.yml/badge.svg?branch=main)](https://github.com/structural-explainability/accountable-record/actions/workflows/ci-python.yml)
-[![Links](https://github.com/structural-explainability/accountable-record/actions/workflows/links.yml/badge.svg?branch=main)](https://github.com/structural-explainability/accountable-record/actions/workflows/links.yml)
-[![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen.svg)](https://github.com/structural-explainability/accountable-record/security)
+[![CI](https://github.com/structural-explainability/accountable-record-spec/actions/workflows/ci-python.yml/badge.svg?branch=main)](https://github.com/structural-explainability/accountable-record-spec/actions/workflows/ci-python.yml)
+[![Links](https://github.com/structural-explainability/accountable-record-spec/actions/workflows/links.yml/badge.svg?branch=main)](https://github.com/structural-explainability/accountable-record-spec/actions/workflows/links.yml)
+[![Dependabot](https://img.shields.io/badge/Dependabot-enabled-brightgreen.svg)](https://github.com/structural-explainability/accountable-record-spec/security)
 
 > Shared contract for Accountable Record systems.
 
@@ -164,9 +164,9 @@ disagreement, reinterpretation, and time.
 Open a machine terminal where you want the project:
 
 ```shell
-git clone https://github.com/structural-explainability/accountable-record
+git clone https://github.com/structural-explainability/accountable-record-spec
 
-cd accountable-record
+cd accountable-record-spec
 code .
 ```
 
@@ -180,11 +180,19 @@ uv sync --extra dev --extra docs --upgrade
 # install git hooks once per clone
 uvx pre-commit install
 
-# generate/check registry artifacts
+# validate Markdown sources and generated specification artifacts
 uv run se-validate
+
+# generate machine-readable specification artifacts under data/spec/
 uv run se-ref-export
+
+# check that generated data/spec/ artifacts are current
 uv run se-ref-export --check
+
+# validate reference artifacts and registry consistency
 uv run se-ref-validate
+
+# run strict validation, including all standard source and export checks
 uv run se-validate --strict
 
 # autofix and manual fix issues

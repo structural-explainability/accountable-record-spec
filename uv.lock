@@ -3,7 +3,7 @@ revision = 3
 requires-python = ">=3.15"
 
 [[package]]
-name = "accountable-record"
+name = "accountable-record-spec"
 source = { editable = "." }
 dependencies = [
     { name = "se-manifest-schema" },

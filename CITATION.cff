@@ -17,12 +17,12 @@ authors:
     given-names: Denise M.
     orcid: "https://orcid.org/0000-0001-6165-7389"
 
-repository-code: "https://github.com/structural-explainability/accountable-record"
+repository-code: "https://github.com/structural-explainability/accountable-record-spec"
 license: MIT
 
 keywords:
   - structural-explainability
-  - accountable-record
+  - accountable-record-spec
   - persistent-disagreement
   - information-systems
   - verification

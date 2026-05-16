@@ -3,16 +3,16 @@
 from dataclasses import asdict
 import json
 
-from accountable_record.export import (
+from accountable_record_spec.export import (
     build_conformance_export,
     build_requirements_export,
     build_scope_exclusions_export,
     canonical_ids,
     export_all,
 )
-from accountable_record.spec_config import SPEC_CONFIG
-from accountable_record.utils.load_utils import load_fallback_version
-from accountable_record.utils.path_utils import data_spec_path, repo_root
+from accountable_record_spec.spec_config import SPEC_CONFIG
+from accountable_record_spec.utils.load_utils import load_fallback_version
+from accountable_record_spec.utils.path_utils import data_spec_path, repo_root
 
 
 def test_conformance_export_contains_canonical_identifiers() -> None:

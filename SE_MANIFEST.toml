@@ -1,6 +1,6 @@
 # ============================================================
 # SE_MANIFEST.toml (Repository Declaration)
-# accountable-record
+# accountable-record-spec
 # ============================================================
 
 schema = "se-manifest-schema"
@@ -12,9 +12,9 @@ schema_url = "https://github.com/structural-explainability/se-manifest-schema/bl
 purpose = "To make explicit the boundaries, responsibilities, and expectations of this repository relative to others."
 
 [repo]
-name = "accountable-record"
+name = "accountable-record-spec"
 org = "structural-explainability"
-class = "accountable_record"
+class = "accountable_record_spec"
 kind = "contract"
 status = "active"
 since = "2026"
@@ -22,7 +22,7 @@ summary = "Defines the Accountable Record contract for durable information syste
 
 [layer]
 space = "application"
-role = "accountable-record-contract"
+role = "accountable-record-spec-contract"
 
 # === Dependencies ===
 
@@ -76,16 +76,16 @@ excludes = [
 # === Validation ===
 
 [validation]
-entrypoint = "uv run accountable-record-validate"
-export_check_entrypoint = "uv run accountable-record-ref-export --check"
-reference_entrypoint = "uv run accountable-record-ref-validate"
-strict_entrypoint = "uv run accountable-record-validate --strict"
+entrypoint = "uv run accountable-record-spec-validate"
+export_check_entrypoint = "uv run accountable-record-spec-ref-export --check"
+reference_entrypoint = "uv run accountable-record-spec-ref-validate"
+strict_entrypoint = "uv run accountable-record-spec-validate --strict"
 tag_entrypoint = "uv run python -m se_manifest_schema validate --strict --require-tag"
 
 # === Behavior / governance ===
 
 [naming]
-pattern = "accountable-record"
+pattern = "accountable-record-spec"
 
 [governance]
 authority = "structural-explainability"
@@ -97,4 +97,4 @@ cff = "CITATION.cff"
 preferred = "software"
 
 [traceability]
-identifier_map = "structural-explainability/accountable-record/IDENTIFIERS.md"
+identifier_map = "structural-explainability/accountable-record-spec/IDENTIFIERS.md"

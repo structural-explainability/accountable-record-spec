@@ -1,15 +1,18 @@
-# src/accountable_record/commands/root.py
+# src/accountable_record_spec/commands/root.py
 """Root command dispatcher."""
 
 import argparse
 
-from accountable_record.commands.manifest import sync_main
-from accountable_record.commands.reference import ref_export_main, ref_validate_main
-from accountable_record.commands.validate import validate_main
+from accountable_record_spec.commands.manifest import sync_main
+from accountable_record_spec.commands.reference import (
+    ref_export_main,
+    ref_validate_main,
+)
+from accountable_record_spec.commands.validate import validate_main
 
 
 def main(argv: list[str] | None = None) -> int:
-    """Dispatch accountable_record commands."""
+    """Dispatch accountable_record_spec commands."""
     parser = argparse.ArgumentParser(description="command line interface.")
     subparsers = parser.add_subparsers(dest="command")
 

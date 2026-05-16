@@ -1,14 +1,14 @@
 """Tests for CONFORMANCE.md requirement coverage."""
 
-from accountable_record.spec_config import SPEC_CONFIG
-from accountable_record.utils.extractor_utils import (
+from accountable_record_spec.spec_config import SPEC_CONFIG
+from accountable_record_spec.utils.extractor_utils import (
     assert_alphabetical_order,
     assert_exact_identifier_coverage,
     extract_heading_identifiers,
     extract_identifier_notes,
 )
-from accountable_record.utils.load_utils import load_text
-from accountable_record.utils.path_utils import repo_root
+from accountable_record_spec.utils.load_utils import load_text
+from accountable_record_spec.utils.path_utils import repo_root
 
 
 def test_conformance_covers_all_canonical_identifiers() -> None:

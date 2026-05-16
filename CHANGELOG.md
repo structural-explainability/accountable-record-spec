@@ -114,5 +114,5 @@ git push origin :refs/tags/vX.Z.Y
 
 ## Links
 
-[Unreleased]: https://github.com/structural-explainability/accountable-record/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/structural-explainability/accountable-record/releases/tag/v0.1.0
+[Unreleased]: https://github.com/structural-explainability/accountable-record-spec/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/structural-explainability/accountable-record-spec/releases/tag/v0.1.0

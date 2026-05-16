@@ -1,6 +1,6 @@
 """Tests for specification configuration."""
 
-from accountable_record.spec_config import SPEC_CONFIG
+from accountable_record_spec.spec_config import SPEC_CONFIG
 
 
 def test_spec_config_has_export_schemas() -> None:

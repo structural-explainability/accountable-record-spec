@@ -1,5 +1,5 @@
 """Validation and export utilities."""
 
-from accountable_record._version import __version__
+from accountable_record_spec._version import __version__
 
 __all__ = ["__version__"]
