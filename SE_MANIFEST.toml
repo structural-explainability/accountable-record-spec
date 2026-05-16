@@ -1,0 +1,100 @@
+# ============================================================
+# SE_MANIFEST.toml (Repository Declaration)
+# accountable-record
+# ============================================================
+
+schema = "se-manifest-schema"
+schema_url = "https://github.com/structural-explainability/se-manifest-schema/blob/main/manifest-schema.toml"
+
+# === Identity ===
+
+[meta]
+purpose = "To make explicit the boundaries, responsibilities, and expectations of this repository relative to others."
+
+[repo]
+name = "accountable-record"
+org = "structural-explainability"
+class = "accountable_record"
+kind = "contract"
+status = "active"
+since = "2026"
+summary = "Defines the Accountable Record contract for durable information systems under persistent disagreement."
+
+[layer]
+space = "application"
+role = "accountable-record-contract"
+
+# === Dependencies ===
+
+[depends]
+required = [
+  "structural-explainability/spec-se@main",
+  "structural-explainability/spec-ae@main",
+  "structural-explainability/spec-ep@main",
+  "structural-explainability/spec-gb@main",
+  "structural-explainability/spec-ib@main",
+  "structural-explainability/spec-cee@main",
+]
+optional = []
+
+# === Provided artifacts ===
+
+[provides]
+artifacts = [
+  "README.md",
+  "SPEC.md",
+  "IDENTIFIERS.md",
+  "CONFORMANCE.md",
+  "EXPORT_CONTRACT.md",
+  "VERIFICATION_MODEL.md",
+  "FAILURE_MODES.md",
+  "data/spec/requirements.json",
+  "data/spec/conformance-checks.json",
+  "data/spec/scope-exclusions.json",
+]
+
+# === Scope ===
+
+[scope]
+includes = [
+  "accountable record contract",
+  "export bundle requirements for accountable record systems",
+  "verification trace requirements",
+  "shared failure modes for systems under persistent disagreement",
+  "structural constraints for durable inspection, contestation, audit, and reuse",
+]
+
+excludes = [
+  "domain vocabularies",
+  "domain-specific record models",
+  "legal, civic, benefits, or planning determinations",
+  "analytics, inference, optimization, recommendation, or decision logic",
+  "claims of truth, correctness, authority, legitimacy, obligation, or enforcement",
+  "replacement of existing standards, ontologies, schemas, or data systems",
+]
+
+# === Validation ===
+
+[validation]
+entrypoint = "uv run accountable-record-validate"
+export_check_entrypoint = "uv run accountable-record-ref-export --check"
+reference_entrypoint = "uv run accountable-record-ref-validate"
+strict_entrypoint = "uv run accountable-record-validate --strict"
+tag_entrypoint = "uv run python -m se_manifest_schema validate --strict --require-tag"
+
+# === Behavior / governance ===
+
+[naming]
+pattern = "accountable-record"
+
+[governance]
+authority = "structural-explainability"
+
+# === External references ===
+
+[citation]
+cff = "CITATION.cff"
+preferred = "software"
+
+[traceability]
+identifier_map = "structural-explainability/accountable-record/IDENTIFIERS.md"
