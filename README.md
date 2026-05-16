@@ -178,7 +178,6 @@ uv python pin 3.15
 uv sync --extra dev --extra docs --upgrade
 
 # install git hooks once per clone
-uvx pre-commit uninstall
 uvx pre-commit install
 
 # generate/check registry artifacts
